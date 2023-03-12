@@ -30,6 +30,9 @@ body {
     cursor: pointer;
     transition: all 0.5s;
 }
+.accordion__item:hover~ .accordion__title::after {
+    display: none;
+} 
 .accordion__input {
     width: 0;
     height: 0;
@@ -79,4 +82,41 @@ body {
     border-style: solid;
     border-width: 0 0.31rem 0.5rem 0.31rem;
     border-color: transparent transparent #333 transparent;
+}
+
+@media(max-width:820px){
+    .title {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .accordion {
+        max-width: 400px;
+        margin: 10px auto;
+    }
+    .accordion__title {
+        font-size: 15px;
+    }
+    .meme__img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media(max-width:820px){
+    .title {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    .accordion {
+        max-width: 300px;
+        margin: 5px auto;
+    }
+    .accordion__title {
+        font-size: 12px;
+    }
+    .meme__img {
+        width: 100px;
+        height: 100px;
+    }
+    
 }
