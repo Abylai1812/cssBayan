@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+    background-color: #fff;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+.title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.accordion {
+    max-width: 37rem;
+    margin: 1rem auto;
+}
+.accordion__item {
+    border: 0.16rem solid #ccc;
+    max-width: 37rem;
+    max-height: 16.5rem;
+    margin-bottom: 0.31rem;
+    border-radius: 1.25rem;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.accordion__input {
+    width: 0;
+    height: 0;
+    appearance: none;
+    position: absolute;
+}
+.accordion__title:hover {
+    background-color: #ccc;
+    border-radius: 1.25rem;
+}
+.meme__img {
+    width: 12rem;
+    height: 12rem;
+}
+.accordion__content {
+    display: none;
+    padding: 1rem 1rem;
+    color: #fff;
+}
+.accordion__title {
+    display: block;
+    padding: 0.6rem 1rem;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+    color: #000000;
+}
+.accordion__input:checked ~ .accordion__title {
+    background-color: #ccc;
+    border-radius: 1.25rem;
+}
+.accordion__title::after {
+    content: "";
+    display: block;
+    border-style: solid;
+    border-width: 0.5rem 0.31rem 0 0.31rem;
+    border-color: #333 transparent transparent transparent;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+}
+.accordion__input:checked ~ .accordion__content {
+    display: block;
+}
+.accordion__input:checked ~ .accordion__title::after {
+    border-style: solid;
+    border-width: 0 0.31rem 0.5rem 0.31rem;
+    border-color: transparent transparent #333 transparent;
+}
