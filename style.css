@@ -31,7 +31,7 @@ body {
     transition: all 0.5s;
 }
 .accordion__item:hover~ .accordion__title::after {
-    display: none;
+    display: block;
 } 
 .accordion__input {
     width: 0;
@@ -51,6 +51,7 @@ body {
     display: none;
     padding: 1rem 1rem;
     color: #fff;
+    text-align: center;
 }
 .accordion__title {
     display: block;
